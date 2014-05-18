@@ -15,13 +15,17 @@ html, body {
 
 /* line 12, ../_sass/home.scss */
 .pt-page-1 {
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
-/* line 16, ../_sass/home.scss */
+/* line 22, ../_sass/home.scss */
 .pt-page {
   width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
@@ -37,25 +41,25 @@ html, body {
   transform-style: preserve-3d;
 }
 
-/* line 35, ../_sass/home.scss */
+/* line 40, ../_sass/home.scss */
 .pt-page-current,
 .no-js .pt-page {
   visibility: visible;
   z-index: 1;
 }
 
-/* line 40, ../_sass/home.scss */
+/* line 45, ../_sass/home.scss */
 .no-js body {
   overflow: auto;
 }
 
-/* line 44, ../_sass/home.scss */
+/* line 49, ../_sass/home.scss */
 .pt-page-ontop {
   z-index: 999;
 }
 
 /* Text Styles, Colors, Backgrounds */
-/* line 50, ../_sass/home.scss */
+/* line 55, ../_sass/home.scss */
 .pt-page h1 {
   position: absolute;
   font-weight: 300;
@@ -70,7 +74,7 @@ html, body {
   word-spacing: -0.3em;
 }
 
-/* line 64, ../_sass/home.scss */
+/* line 69, ../_sass/home.scss */
 .pt-page h1 span {
   font-family: 'Satisfy', serif;
   font-weight: 400;
@@ -82,18 +86,18 @@ html, body {
   opacity: 0.4;
 }
 
-/* line 75, ../_sass/home.scss */
+/* line 80, ../_sass/home.scss */
 .pt-page h1 strong {
   color: rgba(0, 0, 0, 0.1);
 }
 
 /* Triggers (menu and button) */
-/* line 81, ../_sass/home.scss */
+/* line 86, ../_sass/home.scss */
 .no-js .pt-triggers {
   display: none;
 }
 
-/* line 85, ../_sass/home.scss */
+/* line 90, ../_sass/home.scss */
 .pt-message {
   display: none;
   position: absolute;
@@ -105,20 +109,20 @@ html, body {
   text-align: center;
 }
 
-/* line 96, ../_sass/home.scss */
+/* line 101, ../_sass/home.scss */
 .pt-message p {
   margin: 0;
   line-height: 60px;
   font-size: 26px;
 }
 
-/* line 102, ../_sass/home.scss */
+/* line 107, ../_sass/home.scss */
 .no-cssanimations .pt-message {
   display: block;
 }
 
 @media screen and (max-width: 47.4375em) {
-  /* line 107, ../_sass/home.scss */
+  /* line 112, ../_sass/home.scss */
   .pt-page h1 {
     font-size: 3em;
   }
