@@ -79,6 +79,8 @@ var PageTransitions = (function() {
 			}
 		} );
 
+		$( '.pt-perspective' ).css( 'position', 'absolute' );
+
 		if( !support ) {
 			onEndAnimation( $currPage, $nextPage );
 		}

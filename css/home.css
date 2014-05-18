@@ -5,7 +5,7 @@ html, body {
 
 /* line 3, ../_sass/home.scss */
 .pt-perspective {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100%;
   -webkit-perspective: 1200px;
@@ -15,7 +15,6 @@ html, body {
 
 /* line 12, ../_sass/home.scss */
 .pt-page-1 {
-  position: fixed;
   top: 0;
   left: 0;
   /* Preserve aspet ratio */
@@ -23,8 +22,9 @@ html, body {
   height: 100%;
 }
 
-/* line 22, ../_sass/home.scss */
+/* line 21, ../_sass/home.scss */
 .pt-page {
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
