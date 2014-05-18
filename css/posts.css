@@ -1,0 +1,28 @@
+/* line 1, ../_sass/posts.scss */
+#posts {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 7, ../_sass/posts.scss */
+.post {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 12, ../_sass/posts.scss */
+.post-title {
+  text-align: right;
+}
+
+/* line 16, ../_sass/posts.scss */
+.post-content {
+  text-align: justify;
+  padding-bottom: 5px;
+}
+
+/* line 21, ../_sass/posts.scss */
+.post-footer {
+  text-align: right;
+}
