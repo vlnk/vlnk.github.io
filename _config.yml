@@ -1,4 +1,5 @@
 name: Standards of an underground life
 markdown: redcarpet
 pygments: true
+baseurl: /blog
 paginate: 5
