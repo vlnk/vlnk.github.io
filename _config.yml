@@ -1,4 +1,4 @@
 name: Standards of an underground life
 markdown: redcarpet
-pygments: true
+highlighter: true
 paginate: 5

@@ -1,0 +1,14 @@
+#sidebar {
+	position: fixed;
+	display: block;
+	top: 0;
+	bottom: 0;
+    /*border: 2px solid green;*/
+    height: 100%;
+    width: 25%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

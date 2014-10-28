@@ -7,7 +7,11 @@
 @import url(./home.css);
 @import url(./article.css);
 @import url(./posts.css);
-@import url(./animations.css);
+@import url(./nav.css);
+@import url(./sidebar.css);
+@import url(./slabtext.css);
+
+
 /* line 17, ../../../../../usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
