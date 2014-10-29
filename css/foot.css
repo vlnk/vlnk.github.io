@@ -1,0 +1,26 @@
+.foot{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.foot p{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 700px;
+	font-family: "vollkornitalic", "Arial", sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+.foot a{
+	text-decoration: none;
+	color: #000;
+	background-color: rgb(223, 242, 255);
+}
+.foot a:hover, .foot a:focus{
+	text-decoration: none;
+}

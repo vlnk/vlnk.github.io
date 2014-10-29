@@ -5,12 +5,9 @@
 @import url(../fonts/fonts.css);
 @import url(./header.css);
 @import url(./home.css);
-@import url(./article.css);
-@import url(./posts.css);
-@import url(./nav.css);
+@import url(./post.css);
 @import url(./sidebar.css);
-@import url(./slabtext.css);
-
+@import url(./foot.css);
 
 /* line 17, ../../../../../usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,

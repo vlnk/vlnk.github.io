@@ -1,9 +1,29 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<div class="sidebar-post">
+	<div class="nav">
+		<span class="blog"><a href="{{ site.url }}/index.html">#blog</a></span>
+		<span class="projects"><a href="#">#projects</a></span>
+		<span class="about"><a href="#">#about</a></span>
+	</div>
+</div>
+<div class="main-post">
+	<div class="header-post">
+		{% include header.html %}
+	</div>
+	<div class="post">
+		<h2>{{ page.title }}</h2>
+		<div class="meta">
+			<span class="time">{{ page.date | date_to_string }}</span> 
+			{% if page.author %}
+				<span class="author">by {{ page.author }}</span>
+			{% endif %}
+		</div>
 
-<div class="post">
-{{ content }}
+		<div class="content">
+		{{ content }}
+		</div>
+	</div>
+	{% include footer.html %}
 </div>

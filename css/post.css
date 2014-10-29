@@ -1,0 +1,52 @@
+.post > h2 {
+	font-size: 36px;
+	font-size: 2.25rem;
+	line-height: 48px;
+	line-height: 3rem;
+	margin-top: 36px;
+	margin-top: 2.25rem;
+	margin-bottom: 24px;
+	margin-bottom: 1.5rem;
+	font-weight: 700;
+	font-family: "vollkornbold", "Arial", sans-serif;
+}
+
+.main-post{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+.header-post {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.sidebar-post {
+	position: fixed;
+	display: block;
+	top: 0;
+	bottom: 0;
+    height: 5%;
+    width: 100%;
+    z-index: 10;
+}
+
+.post {
+	position: relative;
+  	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1em;
+	max-width: 700px;
+}
+
+.meta {
+	margin-bottom: 16px;
+	margin-bottom: 0.5rem;
+	line-height: 21px;
+	line-height: 1.5rem;
+}
