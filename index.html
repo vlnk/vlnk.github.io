@@ -1,25 +1,32 @@
 ---
 layout: default
-title: standards of one underground living
+title: standards of unconscionable living
 ---
-{% include sidebar-blog.html %}
+<div id="sidebar">
+	<div class="nav">
+		<span class="blog-current">#blog</span>
+		<span class="projects"><a href="https://github.com/vlnk">#projects</a></span>
+		<span class="music"><a href="https://soundcloud.com/vlnk">#music</a></span>
+	</div>
+	<img id="tipped" title="about" src="img/souliving.jpg" width="555" height="1800" alt="">
+</div>
 <div id="main">
 	<div id="home">
 		{% include header.html %}
 		<ul id="posts">
 		    {% for post in site.posts %}
-		    <li>
-	      		<div class="title">
-	      			<span class="time">{{ post.date | date_to_string }}</span>
-	      			<a href="{{ post.url }}">{{ post.title }}</a></br>
-	      			{% if post.author %}
-	      				<span class="author">by {{ post.author }}</span>
-	      			{% endif %}
-	      		</div>
-	      		<div class="content">{{ post.excerpt }} 
-	      			<span class="excerpt-link"><a href="{{ post.url }}">(continue reading...)</a></span>
-	      		</div>
-		      </li>
+			    <li>
+		      		<div class="title">
+		      			<span class="time">{{ post.date | date_to_string }}</span>
+		      			<a href="{{ post.url }}">{{ post.title }}</a></br>
+		      			{% if post.author %}
+		      				<span class="author">by {{ post.author }}</span>
+		      			{% endif %}
+		      		</div>
+		      		<div class="content">{{ post.excerpt }} 
+		      			<span class="excerpt-link"><a href="{{ post.url }}">(continue reading...)</a></span>
+		      		</div>
+			      </li>
 		    {% endfor %}
 	  	</ul>
 	</div>

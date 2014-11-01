@@ -8,6 +8,9 @@
 @import url(./post.css);
 @import url(./sidebar.css);
 @import url(./foot.css);
+@import url(./syntax.css);
+
+@import url(./tip/tip-twitter.css);
 
 /* line 17, ../../../../../usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,

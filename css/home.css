@@ -21,6 +21,7 @@
 
 .time {
 	background-color: rgb(52, 90, 123);
+	font-family: "vollkornbold", "Arial", sans-serif;
 	color: #fff;
 	border-radius: 4px;
 	border-radius: 0.25rem;
@@ -42,10 +43,6 @@
 
 .footer {
   text-align: right;
-}
-
-@media screen and (min-width: 47.5em ) {
-	#main {width: 75%}
 }
 
 .title {
@@ -86,5 +83,14 @@
 .excerpt-link a{
 	text-decoration: none;
 	color: grey;
+}
+
+.about{
+	text-align: left;
+}
+
+@media screen and (min-width: 47.5em ) {
+	#main {width: 75%}
+	.about {margin-bottom: 5%; height: auto; visibility: visible;}
 }
 

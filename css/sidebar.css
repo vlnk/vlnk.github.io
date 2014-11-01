@@ -18,23 +18,24 @@ img {
     height: auto;
 }
 
-@media screen and (min-width: 47.5em ) {
-	#sidebar {width: 25%; height: 100%; text-align: left;}
-	#sidebar > img {visibility: visible;}
-	.nav {margin: auto; text-align: center;}
-}
-
 .nav {
 	background-color: #fff;
 	position: relative;
 	display: block;
-	width: 100%;
+	text-align: left;
 }
 
-.projects > a, .blog > a, .about > a, .blog-current{
+@media screen and (min-width: 47.5em ) {
+	#sidebar {width: 25%; height: 100%;}
+	#sidebar > img {visibility: visible;}
+	.nav {margin: auto; text-align: center;}
+}
+
+.projects > a, .blog > a, .music > a,
+.blog-current{
 	text-decoration: none;
 	font-family: "good_footregular", "Arial", sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 	line-height: 1.5em;
 	margin: 4px;
 	padding: 0px 3px 2px 3px;
@@ -46,7 +47,7 @@ img {
 	color: rgb(52,90,123);
 }
 
-.about > a{
+.music > a{
 	color: rgb(132,74,145);
 }
 
@@ -55,8 +56,8 @@ img {
 }
 
 .blog > a:hover, .blog > a:focus, 
-.about > a:hover, .about > a:focus, 
-.projects > a:hover, .blog > a:focus{
+.music > a:hover, .music > a:focus, 
+.projects > a:hover{
 	color: #fff;
 	border-radius: 4px;
 	border-radius: 0.25rem;
@@ -66,13 +67,14 @@ img {
 	background-color: rgb(52,90,123);
 }
 
-.about > a:hover, .about > a:focus{
+.music > a:hover, .music > a:focus{
 	background-color: rgb(132,74,145);
 }
 
 .projects > a:hover, .projects > a:focus{
 	background-color: rgb(253,79,76);
 }
+
 .blog-current{
 	background-color: rgb(52,90,123);
 	color: #fff;
