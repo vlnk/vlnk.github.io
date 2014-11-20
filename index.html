@@ -5,8 +5,12 @@ title: standards of unconscionable living
 <div id="sidebar">
 	<div class="nav">
 		<span class="blog-current">#blog</span>
-		<span class="projects"><a href="https://github.com/vlnk">#projects</a></span>
-		<span class="music"><a href="https://soundcloud.com/vlnk">#music</a></span>
+		<span class="projects">
+			<a href="https://github.com/vlnk">#project</a>
+		</span>
+		<span class="music">
+			<a href="https://soundcloud.com/vlnk">#music</a>
+		</span>
 	</div>
 	<img id="tipped" title="about" src="img/souliving.jpg" width="555" height="1800" alt="">
 </div>
@@ -15,20 +19,38 @@ title: standards of unconscionable living
 		{% include header.html %}
 		<ul id="posts">
 		    {% for post in site.posts %}
-			    <li>
+			    <li class="post">
 		      		<div class="title">
 		      			<span class="time">{{ post.date | date_to_string }}</span>
-		      			<a href="{{ post.url }}">{{ post.title }}</a></br>
+		      			<a href="{{ post.url }}">{{ post.title }}</a>
 		      			{% if post.author %}
 		      				<span class="author">by {{ post.author }}</span>
 		      			{% endif %}
 		      		</div>
-		      		<div class="content">{{ post.excerpt }} 
+		      		<div class="content excerpt">{{ post.excerpt }} 
 		      			<span class="excerpt-link"><a href="{{ post.url }}">(continue reading...)</a></span>
 		      		</div>
-			      </li>
+			    </li>
 		    {% endfor %}
 	  	</ul>
 	</div>
 	{% include footer.html %}
 </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.poshytip.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	$('#tipped').poshytip({
+		className: 'tip-twitter',
+		content: '<p class="about">I am a student in computer science, an art lover and I make some stuff about programming, music and movies during my free time.</br>I love sharing and discussing about these stuffs in order to improve my open minded behavior and my experience of this world.</p>',
+		alignX: 'center',
+		alignY: 'bottom',
+		showTimeout: 1,
+		followCursor: true,
+		fade: false,
+		slide: false
+	});
+});
+//]]>
+	</script>

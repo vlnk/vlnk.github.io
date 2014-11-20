@@ -3,9 +3,15 @@ layout: default
 ---
 <div class="sidebar-post">
 	<div class="nav">
-		<span class="blog"><a href="{{ site.url }}/index.html">#blog</a></span>
-		<span class="projects"><a href="https://github.com/vlnk">#projects</a></span>
-		<span class="music"><a href="https://soundcloud.com/vlnk">#music</a></span>
+		<span class="blog">
+			<a href="{{ site.url }}/index.html">#blog</a>
+		</span>
+		<span class="projects">
+			<a href="https://github.com/vlnk">#projects</a>
+		</span>
+		<span class="music">
+			<a href="https://soundcloud.com/vlnk">#music</a>
+		</span>
 	</div>
 </div>
 <div class="main-post">
@@ -24,6 +30,19 @@ layout: default
 		<div class="content">
 		{{ content }}
 		</div>
+	    <div id="disqus_thread"></div>
+		<script type="text/javascript">
+	    	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	    	var disqus_shortname = 'souliving'; // required: replace example with your forum shortname
+
+	    	/* * * DON'T EDIT BELOW THIS LINE * * */
+	    	(function() {
+	        	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    	})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	</div>
 	{% include footer.html %}
 </div>
