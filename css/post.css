@@ -50,8 +50,17 @@
 .post {
 	position: relative;
   	display: block;
+	max-width: 800px;
 	margin-left: 5%;
 	margin-right: 5%;
+}
+
+.main-post > .foot {
+	position: relative;
+	display: block;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .meta {
@@ -62,6 +71,6 @@
 }
 
 @media screen and (min-width: 47.5em ) {
-	.main-post .post{ margin-left: 10%; margin-right: 10%; }
-	.main-post > .foot p{ margin-left: 10%; margin-right: 10%; }
+	.main-post .post{ margin-left: auto; margin-right: auto; }
+	.main-post > .foot p{ margin-left: auto; margin-right: auto; }
 }
