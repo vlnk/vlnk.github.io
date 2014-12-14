@@ -1,27 +1,14 @@
 ---
 layout: default
 ---
-<div class="sidebar-post">
-	<div class="nav">
-		<span class="blog">
-			<a href="{{ site.url }}/index.html">#blog</a>
-		</span>
-		<span class="projects">
-			<a href="https://github.com/vlnk">#projects</a>
-		</span>
-		<span class="music">
-			<a href="https://soundcloud.com/vlnk">#music</a>
-		</span>
-	</div>
-</div>
-<div class="main-post">
+<div class="main">
 	<div class="header-post">
 		{% include header.html %}
 	</div>
 	<div class="post">
 		<h2>{{ page.title }}</h2>
 		<div class="meta">
-			<span class="time">{{ page.date | date_to_string }}</span>
+			<span class="time">{{ page.date | date_to_string }}, </span>
 			{% if page.author %}
 				<span class="author">by {{ page.author }}</span>
 			{% endif %}

@@ -2,37 +2,49 @@
 layout: default
 title: standards of unconscionable living
 ---
+<!-- <img id="main-img" title="about" src="img/souliving.jpg" width="555" height="1800" alt="">
 <div id="sidebar">
-	<div class="nav">
-		<span class="blog-current">#blog</span>
-		<span class="projects">
-			<a href="https://github.com/vlnk">#project</a>
-		</span>
-		<span class="music">
-			<a href="https://soundcloud.com/vlnk">#music</a>
-		</span>
-	</div>
-	<img title="about" src="img/souliving.jpg" width="555" height="1800" alt="">
-</div>
-<div id="main">
-	<div id="home">
-		{% include header.html %}
+<nav>
+<span class="site-name"><a href="#">sounds of unconscionable living</a></span>
+<span class="blog"><a href="#">blog</a></span>
+<span class="projects"><a href="#">projects</a></span>
+<span class="contact"><a href="#">contact</a></span>
+</nav>
+</div> -->
+<div class="main">
+	{% include header.html %}
+
+	<div id="blog">
+		<h2>blog.</h2>
 		<ul id="posts">
-		    {% for post in site.posts %}
-			    <li class="post">
-		      		<div class="title">
-		      			<span class="time">{{ post.date | date_to_string }}</span>
-		      			<a href="{{ post.url }}">{{ post.title }}</a>
-		      			{% if post.author %}
-		      				<span class="author">by {{ post.author }}</span>
-		      			{% endif %}
-		      		</div>
-		      		<div class="content excerpt">{{ post.excerpt }}
-		      			<span class="excerpt-link"><a href="{{ post.url }}">(continue reading...)</a></span>
-		      		</div>
-			    </li>
-		    {% endfor %}
-	  	</ul>
+			{% for post in site.posts %}
+			<li class="post">
+				<!-- {% for tag in post.categories %}
+				<span class="tag">{{ tag }}</span>
+				{% endfor %} -->
+				<span class="time">{{ post.date | date_to_string }}, </span>
+				<a class=title href="{{ post.url }}">{{ post.title }}</a>
+				{% if post.author %}
+				<span class="author">by {{ post.author }}</span>
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+		<!-- {% include footer.html %} -->
 	</div>
-	{% include footer.html %}
+
+	<div id="projects">
+		<h2>projects.</h2>
+		<p>empty</p>
+	</div>
+
+	<div id="about">
+		<h2>about.</h2>
+		<div id="introduction">
+			<img title="about" src="img/valou.jpeg" width="120" height="120" alt="">
+			<p>Hi, I am vlnk! I am a young developer who is still at school. I want to share my love for computing and art.
+				I did some music and movies stuff and I created this blog in order to share it and to talk about the world and other ;)
+		</div>
+	</div>
 </div>
+{% include footer.html %}

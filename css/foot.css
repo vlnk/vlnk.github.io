@@ -1,18 +1,19 @@
 .foot{
 	position: relative;
-	display: inline-block;
-	width: 100%;
+	margin-bottom: 5%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 0px;
+	width: 60%;
 }
 
 .foot p{
 	margin-top: 50px;
 	margin-bottom: 50px;
-	margin-left: 5%;
-	margin-right: 5%;
 	font-family: "vollkornitalic", "Arial", sans-serif;
 	font-size: 1em;
-	line-height: 1.5em;
-	text-align: justify;
+	text-align: center;
 }
 
 .foot a{

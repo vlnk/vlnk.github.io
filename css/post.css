@@ -23,6 +23,14 @@
 	font-family: "vollkornbold", "Arial", sans-serif;
 }
 
+.content {
+	text-align: justify;
+	font-family: "vollkornregular", "Arial", sans-serif;
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
 .main-post{
 	position: absolute;
 	right: 0;
@@ -47,14 +55,6 @@
     z-index: 10;
 }
 
-.post {
-	position: relative;
-  	display: block;
-	max-width: 800px;
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
 .main-post > .foot {
 	position: relative;
 	display: block;
@@ -64,6 +64,7 @@
 }
 
 .meta {
+	text-align: center;
 	margin-bottom: 16px;
 	margin-bottom: 0.5rem;
 	line-height: 21px;
