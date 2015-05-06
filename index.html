@@ -1,50 +1,23 @@
 ---
 layout: default
-title: standards of unconscionable living
 ---
-<!-- <img id="main-img" title="about" src="img/souliving.jpg" width="555" height="1800" alt="">
-<div id="sidebar">
-<nav>
-<span class="site-name"><a href="#">sounds of unconscionable living</a></span>
-<span class="blog"><a href="#">blog</a></span>
-<span class="projects"><a href="#">projects</a></span>
-<span class="contact"><a href="#">contact</a></span>
-</nav>
-</div> -->
-<div class="main">
-	{% include header.html %}
 
-	<div id="blog">
-		<h2>blog.</h2>
-		<ul id="posts">
-			{% for post in site.posts %}
-			<li class="post">
-				<!-- {% for tag in post.categories %}
-				<span class="tag">{{ tag }}</span>
-				{% endfor %} -->
-				<span class="time">{{ post.date | date_to_string }}, </span>
-				<a class=title href="{{ post.url }}">{{ post.title }}</a>
-				{% if post.author %}
-				<span class="author">by {{ post.author }}</span>
-				{% endif %}
-			</li>
-			{% endfor %}
-		</ul>
-		<!-- {% include footer.html %} -->
-	</div>
+<div class="home">
 
-	<div id="projects">
-		<h2>projects.</h2>
-		<p>empty</p>
-	</div>
+  <h1 class="page-heading">Posts</h1>
 
-	<div id="about">
-		<h2>about.</h2>
-		<div id="introduction">
-			<img title="about" src="img/valou.jpeg" width="120" height="120" alt="">
-			<p>Hi, I am vlnk! I am a young developer who is still at school. I want to share my love for computing and art.
-				I did some music and movies stuff and I created this blog in order to share it and to talk about the world and other ;)
-		</div>
-	</div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
 </div>
-{% include footer.html %}
