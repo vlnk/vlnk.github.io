@@ -3,12 +3,10 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: Futura, Monaco, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 1.5;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
@@ -42,11 +40,12 @@ $on-laptop:        800px;
     }
 }
 
+/*
+ * Import partials from `sass_dir` (defaults to `_sass`)
+ */
 
+// Import partials for GLOBAL DESIGN
+@import "base", "global", "syntax-highlighting";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+// Import partials for UI DESIGN
+@import "sidebar", "navbar", "layout", "wrapper", "footer";

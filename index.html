@@ -1,23 +1,33 @@
 ---
 layout: default
 ---
-
 <div class="home">
+  <!--<ul id="results"></ul>-->
+  <p id="resultInfo"></p>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+  <ul id="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        {% if post.categories contains 'blog' %}
+          <a class="blog post-item" href="#" title="{{ post.excerpt }}" onclick="onClickEvent(event)">
+        {% elsif post.categories contains 'music' %}
+          <a class="music post-item" href='#' title="{{ post.src }}">
+        {% elsif post.categories contains 'video' %}
+          <a class="video post-item" href="#" title="{{ post.src }}">
+        {% else %}
+          <a class="code post-item" href="#" title="{{ post.src }}">
+        {% endif %}
+        ({{ post.date | date: "%b %-d, %Y" }}) {{ post.title }}
+          <img class="svg" src="{{ site.baseurl }}/img/expend_more.svg"></img>
+        </a>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <!--
+  <p class="rss-subscribe">
+    subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+  </p>
+  -->
 
 </div>

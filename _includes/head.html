@@ -6,7 +6,26 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+
+  <script src="js/github.js"></script>
+  <script src="js/event.js"></script>
+
+  <script src="js/Animator.js"></script>
+  <script src="js/post/Post.js"></script>
+  <script src="js/post/VideoPost.js"></script>
+  <script src="js/post/MusicPost.js"></script>
+  <script src="js/post/CodePost.js"></script>
+  <script src="js/post/BlogPost.js"></script>
+  <script src="js/post/PostFactory.js"></script>
+
+  <script src="js/main.js"></script>
 </head>

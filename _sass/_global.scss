@@ -1,0 +1,46 @@
+$filter-colors: (
+  blog: #FFCF9C,
+  code: #A4D4B4,
+  music: #FB4E06,
+  video: #CA054D,
+  about: #3B1C32
+);
+
+@mixin getMenuClass ($name, $color) {
+  a.#{$name} {
+    text-decoration: none;
+    color: $color;
+    border-style: solid;
+    border-color: $color;
+    padding: 2px;
+
+    &:hover {
+      color: white;
+      background-color: $color;
+    }
+
+    .svg path{
+      fill: white;
+    }
+  }
+
+  a.#{$name} + .opened {
+    border-style: solid;
+    border-color: $color;
+  }
+
+  div.#{$name} {
+    border-style: solid;
+    border-top: none;
+    border-color: $color;
+
+    @if ($name == 'music' or $name == 'video') {
+      line-height: 0;
+    }
+  }
+}
+
+@mixin getColor ($filter, $filter-colors) {
+  $color: nth(map-values($filter-colors), index(map-keys($filter-colors), $filter));
+  @include getMenuClass($filter, $color);
+}

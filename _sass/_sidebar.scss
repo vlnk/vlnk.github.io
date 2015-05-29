@@ -1,0 +1,37 @@
+.sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: white;
+
+  a, p {
+    color: black;
+  }
+
+  h1 {
+    color: black;
+    margin-top: 0;
+    font-size: $small-font-size;
+    text-align: center;
+  }
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 48em) {
+  .sidebar-content {
+    position: absolute;
+    right:  1rem;
+    bottom: 1rem;
+    left:   1rem;
+  }
+}
