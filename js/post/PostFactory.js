@@ -4,30 +4,24 @@
 "use strict";
 
 function PostFactory() {
-    this.classRegistry = ['video', 'blog', 'music', 'code'];
+    this.classRegistry = {
+        'video': VimeoPost,
+        'blog': BlogPost,
+        'music': SCPost,
+        'code': GithubPost
+    };
 }
 
 PostFactory.prototype.create = function (tag, subjects) {
     var listOfSubjects = subjects.split(" "),
-        post = new Post(tag),
+        post,
+        className,
         i = 0,
         isFind = false;
 
     do {
-        switch (listOfSubjects[i]) {
-        case 'blog':
-            post = new BlogPost(tag);
-            break;
-        case 'music':
-            post = new SCPost(tag);
-            break;
-        case 'video':
-            post = new VimeoPost(tag);
-            break;
-        case 'code':
-            post = new GithubPost(tag);
-            break;
-        }
+        className = listOfSubjects[i];
+        post = new this.classRegistry[className](tag);
 
         if (post !== null) {
             isFind = true;
@@ -37,6 +31,12 @@ PostFactory.prototype.create = function (tag, subjects) {
 
     } while (i < listOfSubjects.length && isFind !== true);
 
-    registry.push({tag: tag, post: post});
+    post.hello();
+
+    //registry[tag] = post;
+    //this.linkClickEvent(tag, post);
+
+    tag.onclick = post.onClickRequest();
+
     return post;
 };

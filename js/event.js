@@ -7,12 +7,14 @@ var registry = [];
 
 function onClickEvent(evt) {
     console.log(evt);
-    var elt;
+    var i, tag;
 
-    for (elt of registry) {
-        console.log(elt);
-        if (evt.target === elt.tag) {
-            elt.post.click();
+    for (i = 0; i < registry.length; i += 1) {
+        console.log(registry[i]);
+        tag = registry[i];
+
+        if (registry) {
+            obj[post].onClickRequest();
         }
     }
 }

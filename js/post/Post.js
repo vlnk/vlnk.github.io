@@ -44,7 +44,7 @@ Post.prototype.destroy = function () {
     }
 };
 
-Post.prototype.click = function () {
+Post.prototype.onClickRequest = function () {
     if (!this.tag.classList.contains("load")) {
         this.tag.classList.add("load");
         this.load();
