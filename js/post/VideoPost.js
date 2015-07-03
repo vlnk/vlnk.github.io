@@ -7,6 +7,9 @@ function VimeoPost(tag) {
     Post.call(this, tag);
 }
 
+VimeoPost.prototype = Object.create(Post.prototype);
+VimeoPost.prototype.constructor = VimeoPost;
+
 VimeoPost.prototype.load = function () {
     this.loadContainer();
 

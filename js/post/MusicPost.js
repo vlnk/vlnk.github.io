@@ -7,6 +7,9 @@ function SCPost(tag) {
     Post.call(this, tag);
 }
 
+SCPost.prototype = Object.create(Post.prototype);
+SCPost.prototype.constructor = SCPost;
+
 SCPost.prototype.hello = function () {
     console.log("SCPost");
 };

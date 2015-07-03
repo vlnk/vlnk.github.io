@@ -13,7 +13,7 @@ Post.prototype.load = function () {
 
 Post.prototype.loadContainer = function () {
     var div = document.createElement('div');
-    div.id = id;
+    div.id = this.tag.title;
     div.className = this.tag.className;
 
     this.tag.parentNode.appendChild(div);

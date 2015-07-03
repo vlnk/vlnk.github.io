@@ -31,12 +31,10 @@ PostFactory.prototype.create = function (tag, subjects) {
 
     } while (i < listOfSubjects.length && isFind !== true);
 
-    post.hello();
-
     //registry[tag] = post;
     //this.linkClickEvent(tag, post);
 
-    tag.onclick = post.onClickRequest();
+    tag.addEventListener("click", post.onClickRequest.bind(post), false);
 
     return post;
 };

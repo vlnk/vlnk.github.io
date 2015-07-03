@@ -9,7 +9,7 @@ layout: default
     {% for post in site.posts %}
       <li>
         {% if post.categories contains 'blog' %}
-          <a class="blog post-item" href="#" title="{{ post.excerpt }}" onclick="onClickEvent(event)">
+          <a class="blog post-item" href="#" title="{{ post.excerpt }}">
         {% elsif post.categories contains 'music' %}
           <a class="music post-item" href='#' title="{{ post.src }}">
         {% elsif post.categories contains 'video' %}
