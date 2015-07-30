@@ -8,19 +8,13 @@ $filter-colors: (
 
 @mixin getMenuClass ($name, $color) {
   a.#{$name} {
-    text-decoration: none;
     color: $color;
     border-style: solid;
     border-color: $color;
-    padding: 2px;
 
     &:hover {
       color: white;
       background-color: $color;
-    }
-
-    .svg path{
-      fill: white;
     }
   }
 

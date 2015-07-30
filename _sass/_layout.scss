@@ -98,30 +98,53 @@
 }
 
 #post-list {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit * 0.4;
-        display: block;
+  li {
+    line-height: 2.5em;
+    margin-left: $spacing-unit * 0.1;
+    font-size: $base-font-size * 1.2;
+    display: inline-block;
 
-        @each $filter in map-keys($filter-colors) {
-          @include getColor($filter, $filter-colors);
+    @each $filter in map-keys($filter-colors) {
+      @include getColor($filter, $filter-colors);
 
-          a {
-            display: block;
-            text-align: center;
-          }
+      a {
+        padding: 0.25em;
+        text-decoration: none;
+        text-align: center;
+      }
 
-          img {
-            display: inline-block;
-            //vertical-align: middle;
-            margin: auto;
-            padding: 0.5%;
-            text-align: 5%;
-          }
+      a.fixed {
+        border-style: solid;
+        border-color: #3B1C32;
+        color: white;
+        background-color: #3B1C32;
+        cursor: default;
+      }
+
+      a.search {
+        border-style: solid;
+        border-color: #3B1C32;
+        color: #3B1C32;
+        background-color: white;
+
+        img {
+          display: inline-block;
+          margin: auto;
+          text-align: 5%;
         }
+
+        &:hover {
+          color: white;
+          background-color: #3B1C32;
+
+          svg { path { fill: white; } }
+        }
+      }
     }
+  }
 }
 
 .post-meta {
