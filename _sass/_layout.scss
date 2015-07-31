@@ -119,9 +119,9 @@
 
       a.fixed {
         border-style: solid;
-        border-color: #3B1C32;
+        border-color: red;
         color: white;
-        background-color: #3B1C32;
+        background-color: red;
         cursor: default;
       }
 
@@ -134,7 +134,6 @@
         img {
           display: inline-block;
           margin: auto;
-          text-align: 5%;
         }
 
         &:hover {
