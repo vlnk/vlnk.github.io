@@ -13,7 +13,7 @@ nav {
       margin: 0;
 
       @each $filter in map-keys($filter-colors) {
-        @include getColor($filter, $filter-colors);
+        //@include getColor($filter, $filter-colors);
       }
 
       a { font-size: $small-font-size; }

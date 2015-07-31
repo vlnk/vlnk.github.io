@@ -108,7 +108,8 @@
     display: inline-block;
 
     @each $filter in map-keys($filter-colors) {
-      @include getColor($filter, $filter-colors);
+      $color: getFilterColor($filter, $filter-colors);
+      @include getMenuClass($filter, $color);
 
       a {
         padding: 0.25em;

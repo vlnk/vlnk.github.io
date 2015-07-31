@@ -17,26 +17,22 @@
 
   footer {
     //line-height: 2.5em;
-    font-size: $small-font-size * 0.8;
+    color: black;
+    font-size: $footer-font-size;
+    font-family: $footer-font-family;
+    text-align: justify;
 
-    ul {
-        text-align: center;
-        li { display: inline-block;  }
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    @each $filter in map-keys($filter-colors) {
+      $color: getFilterColor($filter, $filter-colors);
+      @include getFooterLinkStyle($filter, $color);
     }
 
-    a {
-      padding: 0.25em;
-      border-style: solid;
-      text-decoration: none;
-      border-color: black;
-      color: black;
-      background-color: white;
-
-      &:hover {
-        color: white;
-        background-color: black;
-        background-color: #3B1C32;
-      }
+    .footer-separator {
+      margin: 0;
+      text-align: center;
     }
   }
 }

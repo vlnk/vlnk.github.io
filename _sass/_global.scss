@@ -34,7 +34,19 @@ $filter-colors: (
   }
 }
 
-@mixin getColor ($filter, $filter-colors) {
-  $color: nth(map-values($filter-colors), index(map-keys($filter-colors), $filter));
-  @include getMenuClass($filter, $color);
+@function getFilterColor($filter, $filter-colors) {
+  @return nth(map-values($filter-colors), index(map-keys($filter-colors), $filter));
+}
+
+@mixin getFooterLinkStyle($name, $color) {
+  a.#{$name} {
+    text-decoration: none;
+    color: $color;
+    padding: 4px;
+
+    &:hover {
+      color: white;
+      background-color: $color;
+    }
+  }
 }

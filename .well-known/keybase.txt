@@ -1,0 +1,70 @@
+://keybase.io/vlnk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://vlnk.github.io
+  * I am vlnk (https://keybase.io/vlnk) on keybase.
+  * I have a public key with fingerprint 9398 D0BA BA11 B285 08F6  92EC 2B64 33F7 52AE FDED
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.12"
+        },
+        "key": {
+            "eldest_kid": "0101720614d8136d91a0cf31d7d323dd1fb7b8d6305a7a5060ed6bfec2e108b59b370a",
+            "fingerprint": "9398d0baba11b28508f692ec2b6433f752aefded",
+            "host": "keybase.io",
+            "key_id": "2b6433f752aefded",
+            "kid": "0101720614d8136d91a0cf31d7d323dd1fb7b8d6305a7a5060ed6bfec2e108b59b370a",
+            "uid": "24fadcf0fda4ced948f2bd933545c719",
+            "username": "vlnk"
+        },
+        "service": {
+            "hostname": "vlnk.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1438367951,
+    "expire_in": 157680000,
+    "prev": "e5a3f822e77010a2db05be79104db6a9a9b0e97e8179c28e8a29f729922e6922",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUltIVEEYXk0lu1gRdpGuhyhqbZs595EEsaIsIaiMerBt5syc9bh2zrp73DRb
+ih6KrkTRFcsVLQixqF6ClMweiiKKSjKkC1mQSFFW2ENQZ7xAQY/N0zD/9/3/933/
+HB0/ypeaQkvacEfzzJaUB73EV3Kz/VGtQBxaI+TVCkaFxWyX32y8jQl5QpjVEBxj
+AcuZYzuUBcpjc4YxuUKcRWOWY3soENADUBQSuRzP2ayCspgbDFuUVyGAmghUKFMd
+SipFEAPDlCDVqCRKlEKTaESnqgQUrGEFqIBRlZjMEBkEOlEQkTSAvYGmZYdYNBK1
+uEQBSUingGCCISSirgDdVJHosYgqS5KpKSJmJmXUI5Y5MfcvM8Kg0uCgvH/g/7Pu
+qqE5sompYQKTYtlgFMm6KRKKJEmRFUODiANjLDocfLzCDvNAvZe4ZTAeKnfxRzUQ
+styyKjLkJhJ1XMdwKrxametGYnmc69ZEOHg7I8HhNkFi2dRLcWR7J/n6oAc1XIs3
+hrKkS6qGFJgrsOqIFWVBiyMUTdWBd/ggFvd6MgVLpi6KTNO8mLBICVAI0xAEMiUq
+RhgRwJDGdKghQ9SZjkVkaiJCHsXbkihwZ5W2I+RJnk4c8lrGrJCN3aooExL7U2ak
++VJSfRnpqfx/+sZkThz5tG2bR/vqGp/6w/VdnYlz6Rfs0qZP5ffvTyjw+xdlgBvd
+q0JT0eWyVznFy9d0o6fPvmcnv5y702Q/SZYkQPPW508Kd7uNFy+39h8+WJexsIj0
+NWw88/B2zvz+w99kPOl65dLJewvKz56q71kxalZjS3mVv3pNV8eUotelh14Wfvy8
+sKNrbXxp7fnF2a93FufWr3xR9KGn7WuvcK0wc3Xq9PjGvnUTc44/bnxId+5ZknUl
+a8PVb+Nmb1kfn129a+Bqr0bf3trUVNCZdbf15sCJedPc08dOzs0MT7KiR94lLw24
+732n3sy/93Nuzth3y6zEs9Z9lfUHfvW0J/vHZG/oIz/eLsiv8zcsmrYjLf83
+=75AU
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vlnk
+
+==================================================================
