@@ -8,11 +8,19 @@ $filter-colors: (
   warning: red
 );
 
+.list {
+  list-style: none;
+  overflow: hidden;
+  
+  li { display: inline-block; }
+}
+
 @mixin getMenuClass ($name, $color) {
   li.#{$name} {
     color: $color;
     border-style: solid;
     border-color: $color;
+    border-width: 2px;
     cursor:pointer;
 
     &:hover {
@@ -31,36 +39,31 @@ $filter-colors: (
 }
 
 @mixin getFooterLinkStyle($name, $color) {
-  a.#{$name} {
+  li.#{$name} {
     text-decoration: none;
     color: $color;
     padding: 4px;
+    cursor: pointer;
 
     &:hover {
       color: white;
       background-color: $color;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   }
 }
 
 @mixin getMainListStyle() {
   li {
-    line-height: 2em;
-    //margin-bottom: 0.4em;
     font-size: $base-font-size * 1.2;
-    display: inline-block;
-
-    padding: 0.1em;
-    margin: 0;
-    overflow: hidden;
-    backface-visibility: hidden;
 
     a {
-      display: block;
-
       text-decoration: none;
       color: inherit;
-      height: 2em;
     }
   }
 }

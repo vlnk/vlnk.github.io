@@ -1,0 +1,23 @@
+.home {
+  .posts {
+    line-height: 2rem;
+    overflow: hidden;
+    margin: 0;
+
+    li {
+      padding: 0.2em;
+      margin: 0.2em;
+    }
+
+    @include getMainListStyle();
+
+    @each $filter in map-keys($filter-colors) {
+      $color: getFilterColor($filter, $filter-colors);
+      @include getMenuClass($filter, $color);
+    }
+
+    em {
+      font-size: $base-font-size * 0.8;
+    }
+  }
+}

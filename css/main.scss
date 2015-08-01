@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: Futura, Monaco, Helvetica, Arial, sans-serif;
+$base-font-family: Avenir, Helvetica, Arial, sans-serif;
 $footer-font-family: Menlo, Helvetica, Arial, sans-serif;
 
 $base-font-size:   16px;
@@ -51,4 +51,4 @@ $on-laptop:        800px;
 @import "base", "global", "syntax-highlighting";
 
 // Import partials for UI DESIGN
-@import "sidebar", "navbar", "layout", "wrapper", "footer";
+@import "sidebar", "home", "wrapper", "post";

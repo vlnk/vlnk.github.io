@@ -1,19 +1,32 @@
 .wrapper {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
+  padding-top:    0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.sidebar {
+  background-color: white;
+
+  .content {
+    padding: 0.4rem;
+  }
 }
 
 @media (min-width: 48em) {
   .wrapper {
-    //max-width: 38rem;
     margin-left: 20rem;
     margin-right: 0;
   }
-}
 
-@media (min-width: 64em) {
-  .wrapper {
-    margin-left: 22rem;
-    margin-right: 2rem;
+  .sidebar {
+    position: fixed;
+    width: 18rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .content {
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
   }
 }

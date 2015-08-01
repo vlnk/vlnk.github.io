@@ -1,58 +1,39 @@
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: white;
 
   a, p {
     color: black;
   }
 
+  h1, h2, ul { margin: 0; }
+
   h1 {
     color: black;
-    margin-top: 0;
     font-size: $small-font-size;
     text-align: center;
   }
 
-  footer {
-    //line-height: 2.5em;
-    color: black;
-    font-size: $footer-font-size;
-    font-family: $footer-font-family;
-    text-align: justify;
+  h2 {
+    font-size: $small-font-size * 0.9;
+  }
 
-    margin-top: 1em;
-    margin-bottom: 1em;
+  footer {
+    position: relative;
+    bottom: 0;
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+
+    em {
+      font-size: $base-font-size * 0.8;
+    }
 
     @each $filter in map-keys($filter-colors) {
       $color: getFilterColor($filter, $filter-colors);
       @include getFooterLinkStyle($filter, $color);
     }
-
-    .footer-separator {
-      margin: 0;
-      text-align: center;
-    }
-  }
-}
-
-@media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 18rem;
-    text-align: left;
-  }
-}
-
-@media (min-width: 48em) {
-  .sidebar-content {
-    position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
   }
 }

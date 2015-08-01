@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "irc-simulator"
+title:  "an irc simulator for s.f. screenplays"
 date:   2015-05-08 10:34:43
 categories: code
 author: vlnk

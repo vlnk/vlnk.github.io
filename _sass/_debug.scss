@@ -1,18 +1,8 @@
 $debug: false;
 
 @if $debug {
-  p {
-    border-style: solid;
-    border-color: #ff0000 #0000ff;
-  }
-
   .container {
     border-style: solid;
     border-color: green;
-  }
-
-  img {
-    border-style: solid;
-    border-color: red;
   }
 }
