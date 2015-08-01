@@ -2,6 +2,5 @@
 layout: post
 title:  "Applause"
 date:   2015-06-08 10:34:43
-src: /tracks/82121512
 categories: music
 ---

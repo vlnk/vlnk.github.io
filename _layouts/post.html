@@ -4,20 +4,31 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      {{ page.date | date: "%b %-d, %Y" }}
-      {% if page.author %}
-        • {{ page.author }}
-      {% endif %}
-      {% if page.meta %}
-        • {{ page.meta }}
-      {% endif %}
-    </p>
+    {% if page.categories contains 'blog' %}
+      <h1 class="post-blog-title">
+    {% elsif page.categories contains 'music' %}
+      <h1 class="post-music-title">
+    {% elsif page.categories contains 'video' %}
+      <h1 class="post-video-title">
+    {% else %}
+      <h1 class="post-about-title">
+    {% endif %}
+      {{ page.title }}
+    </h1>
   </header>
 
   <article class="post-content  {{ post.category }}">
     {{ content }}
   </article>
+
+  <p class="post-meta">
+    {{ page.date | date: "%b %-d, %Y" }}
+    {% if page.author %}
+      , {{ page.author }}
+    {% endif %}
+    {% if page.meta %}
+      , {{ page.meta }}
+    {% endif %}
+  </p>
 
 </div>

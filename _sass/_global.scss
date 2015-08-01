@@ -3,33 +3,25 @@ $filter-colors: (
   code: #A4D4B4,
   music: #FB4E06,
   video: #CA054D,
-  about: #3B1C32
+  about: #3B1C32,
+  search: #3B1C32,
+  warning: red
 );
 
 @mixin getMenuClass ($name, $color) {
-  a.#{$name} {
+  li.#{$name} {
     color: $color;
     border-style: solid;
     border-color: $color;
+    cursor:pointer;
 
     &:hover {
       color: white;
       background-color: $color;
-    }
-  }
 
-  a.#{$name} + .opened {
-    border-style: solid;
-    border-color: $color;
-  }
-
-  div.#{$name} {
-    border-style: solid;
-    border-top: none;
-    border-color: $color;
-
-    @if ($name == 'music' or $name == 'video') {
-      line-height: 0;
+      @if ($name == "search") {
+        svg { path { fill: white; } }
+      }
     }
   }
 }
@@ -47,6 +39,28 @@ $filter-colors: (
     &:hover {
       color: white;
       background-color: $color;
+    }
+  }
+}
+
+@mixin getMainListStyle() {
+  li {
+    line-height: 2em;
+    //margin-bottom: 0.4em;
+    font-size: $base-font-size * 1.2;
+    display: inline-block;
+
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+
+    a {
+      display: block;
+
+      text-decoration: none;
+      color: inherit;
+      height: 2em;
     }
   }
 }

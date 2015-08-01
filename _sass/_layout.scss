@@ -1,154 +1,57 @@
-/**
- * Site header
- */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+#head-list {
+  margin-left: 0;
+  list-style: none;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
+  @include getMainListStyle();
+  @include getMenuClass('search', black);
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
-}
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
+  li.fixed {
+    border-style: solid;
+    border-color: red;
+    color: white;
+    background-color: red;
+    cursor: default;
+  }
 }
 
 #post-list {
   margin-left: 0;
   list-style: none;
 
-  li {
-    line-height: 2.5em;
-    margin-left: $spacing-unit * 0.1;
-    font-size: $base-font-size * 1.2;
-    display: inline-block;
+  @include getMainListStyle();
 
-    @each $filter in map-keys($filter-colors) {
-      $color: getFilterColor($filter, $filter-colors);
-      @include getMenuClass($filter, $color);
+  @each $filter in map-keys($filter-colors) {
+    $color: getFilterColor($filter, $filter-colors);
+    @include getMenuClass($filter, $color);
+  }
+}
 
-      a {
-        padding: 0.25em;
-        text-decoration: none;
-        text-align: center;
-      }
+.post {
+  header {
+    text-align: left;
 
-      a.fixed {
-        border-style: solid;
-        border-color: red;
-        color: white;
-        background-color: red;
-        cursor: default;
-      }
-
-      a.search {
-        border-style: solid;
-        border-color: #3B1C32;
-        color: #3B1C32;
-        background-color: white;
-
-        img {
-          display: inline-block;
-          margin: auto;
-        }
-
-        &:hover {
-          color: white;
-          background-color: #3B1C32;
-
-          svg { path { fill: white; } }
-        }
-      }
+    .post-music-title {
+      color: getFilterColor('music', $filter-colors);
     }
+    .post-video-title {
+      color: getFilterColor('video', $filter-colors);
+    }
+    .post-blog-title {
+      color: getFilterColor('blog', $filter-colors);
+    }
+    .post-about-title {
+      color: getFilterColor('about', $filter-colors);
+    }
+  }
+
+  article {
+    font-family: $footer-font-family;
   }
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    text-align: right;
+    font-size: $base-font-size;
     color: $grey-color;
 }
 
